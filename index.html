@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- TODO: нет такого языка -->
 <html lang="ru">
 
 <head>
@@ -11,30 +10,26 @@
 
 <body>
     <div class="wrapper">
-        <!-- TODO: ошибка в тегах и классах. -->
+        <!-- TODO: в итоге у header вообще класс потерялся. Это не критично, но если будешь стилизовать - нужно -->
         <header>
-                <a href="/"class="logo">
-                    <img src="" alt="" class="logo__pic">
-                </a>
-                <address class="contacts">
-                    <!-- TODO: не нужен пробел в ссылке между tel: и номером. Непонятное именование класса cont -->
-                    <a href="tel:+78000039210" class="contacts">8 (800)-00-392-10</a>
-                    <div class="contacts__workhours">Всегда на связи</div>
-                </address>
+            <a href="/" class="logo">
+                <img src="" alt="" class="logo__pic">
+            </a>
+            <!-- TODO: здесь в итоге у тега address и следующего за ним тега a одинаковые классы. Это не ок. -->
+            <address class="contacts">
+                <a href="tel:+78000039210" class="contacts">8 (800)-00-392-10</a>
+                <div class="contacts__workhours">Всегда на связи</div>
+            </address>
         </header>
         <div class="page-content">
             <main class="maim-content">
-                <!-- TODO: breadcrumbs - хлебные крошки. Это не главная навигация сайта. Назови блок и вложенные элементы
-                по другому. -->
                 <nav class="breadcrumbs">
                     <ul class="breadcrumbs__list">
-                        <!-- TODO: неправильный тег элемента списка -->
+                        <!-- TODO: неправильный теги элемента списка -->
                         <il class="breadcrumbs__item">
                             <a href="#" class="breadcrumbs__link">Главная</a>
-                            <!-- TODO: для чего этот класс? -->
                             <div class="breadcrumbs__seperetor"></div>
                         </il>
-                        <!-- TODO: activ => active -->
                         <il class="breadcrumbs__active-item">
                             <a href="#" class="breadcrumbs__activ-link">Маршрут</a>
                             <div class="breadcrumbs__seperetor"></div>
@@ -43,70 +38,51 @@
                 </nav>
                 <div class="route">
                     <div class="route__image">
-                        <!-- TODO: imege => image, elem => element. Называй классы полным именем, без сокращений. На 
-                        скорость кода это не влияет, а читабельность повышает -->
                         <img src="" alt="" class="route__image-element">
-                        <!-- TODO: imag => image -->
                         <h1 class="route__image-title">Маршрут &laquoГоры&raquo</h1>
                     </div>
                     <div class="route__header">
                         <div class="iconed-title">
-                            <!-- TODO: icom => icon -->
                             <img src="" alt="" class="iconed-title__icon">
                             <div class="iconed-title__text">База &laquoСолнышко&raquo
                             </div>
                             <ul class="rating">
-                                <!-- TODO: здесь и ниже reting => rating -->
+                                <!-- TODO: здесь у нескольких li исчез закрывающийся тег -->
                                 <li class="rating__item"><img src="" alt="" class="rating__star">
-                                <li class="rating__item"><img src="" alt="" class="rating__star">
-                                <li class="rating__item"><img src="" alt="" class="rating__star">
-                                <li class="rating__item"><img src="" alt="" class="rating__star">
-                                <li class="rating__item"><img src="" alt="" class="rating__star"></li>
+                                    <li class="rating__item"><img src="" alt="" class="rating__star">
+                                        <li class="rating__item"><img src="" alt="" class="rating__star">
+                                            <li class="rating__item"><img src="" alt="" class="rating__star">
+                                                <li class="rating__item"><img src="" alt="" class="rating__star"></li>
                             </ul>
                         </div>
-                        <!-- TODO: route__discription => route__description -->
-                        <!-- TODO: блоки можно вкладывать в другие блоки, чтобы не городить route__discription-title
-                        можно написать class="route__description description", к примеру, и тогда вложенные элементы p, h3, ul
-                        станут элементами блока description: description__text, description__title и так далее. -->
                         <article class="route__description description">
-                            <!-- TODO: пустой класс? -->
+                            <!-- TODO: здесь и далее в блоке description неверно расставлены классы.
+                            Блок называется description, а элементы почему-то начинаются route__discription -->
                             <p class="route__discription__text">
-                                <b>ipsum</b> dolor sit amet consectetur adipisicing elit. Illum id repellat ab sed
-                                repudiandae eligendi et error aspernatur debitis soluta vitae quos doloribus praesentium
-                                minima, omnis laborum rerum odio deserunt?
+                                <b>ipsum</b> dolor sit amet consectetur adipisicing elit. Illum id repellat ab sed repudiandae eligendi et error aspernatur debitis soluta vitae quos doloribus praesentium minima, omnis laborum rerum odio deserunt?
                             </p>
-                            <h3 class="route__discription__title">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Exercitationem hic non ipsum, aliquid et animi qui nihil itaque deserunt ullam est
-                                quia aut in tenetur! Placeat porro reiciendis beatae sunt!
+                            <h3 class="route__discription__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem hic non ipsum, aliquid et animi qui nihil itaque deserunt ullam est quia aut in tenetur! Placeat porro reiciendis beatae sunt!
                             </h3>
                             <ul class="route__discription__list">
-                                <li class="route__discription__title">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Quaerat est quibusdam voluptatem doloribus qui. Est tempora laborum, maiores
-                                    laboriosam quas cumque minus deserunt consectetur harum rerum quod deleniti, itaque
-                                    quo.
+                                <li class="route__discription__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat est quibusdam voluptatem doloribus qui. Est tempora laborum, maiores laboriosam quas cumque minus deserunt consectetur harum rerum quod deleniti, itaque quo.
                                 </li>
-                                <li class="route__discription__title">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Quaerat est quibusdam voluptatem doloribus qui. Est tempora laborum, maiores
-                                    laboriosam quas cumque minus deserunt consectetur harum rerum quod deleniti, itaque
-                                    quo.
+                                <li class="route__discription__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat est quibusdam voluptatem doloribus qui. Est tempora laborum, maiores laboriosam quas cumque minus deserunt consectetur harum rerum quod deleniti, itaque quo.
                                 </li>
                             </ul>
                         </article>
                         <div class="paginator">
-                            <!-- TODO: displey => display. Можно было просто называть paginator__text -->
                             <div class="paginator__text">Маршрут 1 из 7</div>
                             <a href="" class="paginator__prev">
                             </a>
-                                <ul class="paginator__list">
-                                    <!-- TODO: itev => item -->
-                                    <li class="paginator__item">1</li>
-                                    <li class="paginator__item">2</li>
-                                    <li class="paginator__item">3</li>
-                                    <li class="paginator__item">4</li>
-                                    <li class="paginator__item">5</li>
-                                    <li class="paginator__item">6</li>
-                                    <li class="paginator__item">7</li>
-                                </ul>
+                            <ul class="paginator__list">
+                                <li class="paginator__item">1</li>
+                                <li class="paginator__item">2</li>
+                                <li class="paginator__item">3</li>
+                                <li class="paginator__item">4</li>
+                                <li class="paginator__item">5</li>
+                                <li class="paginator__item">6</li>
+                                <li class="paginator__item">7</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -115,7 +91,6 @@
             <aside class="saidebar">
                 <nav class="menu">
                     <ul class="menu__list">
-                        // TODO: itim => item
                         <li class="menu__item">
                             <img src="" alt="" class="menu__icon">
                             <div class="menu__title">Главная</div>
